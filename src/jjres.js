@@ -34,9 +34,12 @@ export default class Jjres {
 
         console.log(data);
 
-        fetch(URL1, {
+        fetch("/post", {
             method: "POST",
-            body: JSON.stringify(data)
+            body: JSON.stringify({
+                url: URL1,
+                data: data
+            })
         })
             .then(r => r.text())
             .then(console.log);
