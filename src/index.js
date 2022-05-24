@@ -1,13 +1,13 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 
-import Jjres from "./jjres"
+import Jjres from "./jjres";
 
 const classes = [];
 
-document.getElementById("form").addEventListener("click", () => {
-    const jjrss = new Jjres("연희중", "abcd", "0", "0", "0", "홍길동", "");
-    jjrss.codeCheck();
+document.getElementById("form").addEventListener("click", async () => {
+    const jjrss = new Jjres("연희중", "cxoa", "0", "0", "0", "홍길동", "");
+    await jjrss.test();
 });
 
 document.getElementById("add").addEventListener("click", () => {
