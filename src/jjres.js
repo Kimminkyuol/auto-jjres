@@ -171,12 +171,12 @@ export default class Jjres {
             "mode": "true",
         };
 
-        return await fetch("/req", {
+        return (await fetch("/req", {
             method: "POST",
             body: JSON.stringify({
                 url: 2,
                 data: data
             })
-        });
+        })).text();
     }
 }
