@@ -1,5 +1,5 @@
 export default class Jjres {
-    constructor(school, room, hak, bun, ban, name, classes) {
+    constructor(school, room, hak, ban, bun, name, classes) {
         this.stdName = null;
         this.diffDate = null;
         this.userListTypeYn = null;
@@ -12,8 +12,8 @@ export default class Jjres {
         this.school = school;
         this.room = room;
         this.hak = hak;
-        this.bun = bun;
         this.ban = ban;
+        this.bun = bun;
         this.name = name;
         this.classes = classes;
     }
