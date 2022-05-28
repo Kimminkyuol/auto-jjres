@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const classes = [];
 
-document.getElementById("form").addEventListener("click", async (event) => {
+document.getElementById("form").addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const school = document.getElementById("school").innerText;
@@ -16,10 +16,10 @@ document.getElementById("form").addEventListener("click", async (event) => {
     const bun = document.getElementById("bun").innerText;
     const name = document.getElementById("name").innerText;
 
-    const jjrss = new Jjres(school, room, hak, ban, bun, name, classes);
+    const jjres = new Jjres(school, room, hak, ban, bun, name, classes);
 
     try {
-        await jjrss.test();
+        await jjres.test();
     } catch (error) {
         await Swal.fire({
             icon: "error",
@@ -39,7 +39,7 @@ document.getElementById("form").addEventListener("click", async (event) => {
         denyButtonText: "신청 예약",
     }).then(async result => {
         if (result.isConfirmed) {
-            jjrss.setApply().then(result => {
+            jjres.setApply().then(result => {
                 Swal.fire({
                     icon: "info",
                     title: "신청 완료",
@@ -65,7 +65,7 @@ document.getElementById("form").addEventListener("click", async (event) => {
                 let time = date.getTime() - new Date().getTime();
 
                 setTimeout(() => {
-                    jjrss.setApply().then(result => {
+                    jjres.setApply().then(result => {
                         Swal.fire({
                             icon: "info",
                             title: "신청 완료",
