@@ -30,25 +30,26 @@ export default class Jjres {
         try {
             await this.codeCheck();
         } catch (error) {
-            return "학교 이름 오류";
+            throw "학교 이름 오류";
         }
 
         try {
             await this.roomCheck();
         } catch (error) {
-            return "방 이름 오류";
+            throw "방 이름 오류";
         }
 
         try {
             await this.getData();
         } catch (error) {
-            return "내부 오류";
+            console.log(error);
+            throw "내부 오류";
         }
 
         try {
             await this.getName();
         } catch (error) {
-            return "과목명 오류";
+            throw "과목명 오류";
         }
     }
 
@@ -61,7 +62,7 @@ export default class Jjres {
         const r = await fetch("/req", {
             method: "POST",
             body: JSON.stringify({
-                url: 1,
+                url: 0,
                 data: data
             })
         });
@@ -81,7 +82,7 @@ export default class Jjres {
         const r = await fetch("/req", {
             method: "POST",
             body: JSON.stringify({
-                url: 1,
+                url: 0,
                 data: data
             })
         });
@@ -105,7 +106,7 @@ export default class Jjres {
         const r = await fetch("/req", {
             method: "GET",
             body: JSON.stringify({
-                url: 3,
+                url: 2,
                 data: data
             })
         });
@@ -141,7 +142,7 @@ export default class Jjres {
         const r = await fetch("/req", {
             method: "POST",
             body: JSON.stringify({
-                url: 1,
+                url: 0,
                 data: data
             })
         });
@@ -174,7 +175,7 @@ export default class Jjres {
         return (await fetch("/req", {
             method: "POST",
             body: JSON.stringify({
-                url: 2,
+                url: 1,
                 data: data
             })
         })).text();

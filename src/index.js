@@ -9,12 +9,12 @@ const classes = [];
 document.getElementById("form").addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const school = document.getElementById("school").innerText;
-    const room = document.getElementById("room").innerText;
-    const hak = document.getElementById("hak").innerText;
-    const ban = document.getElementById("ban").innerText;
-    const bun = document.getElementById("bun").innerText;
-    const name = document.getElementById("name").innerText;
+    const school = document.getElementById("school").value;
+    const room = document.getElementById("room").value;
+    const hak = document.getElementById("hak").value;
+    const ban = document.getElementById("ban").value;
+    const bun = document.getElementById("bun").value;
+    const name = document.getElementById("name").value;
 
     const jjres = new Jjres(school, room, hak, ban, bun, name, classes);
 
