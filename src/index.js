@@ -14,9 +14,8 @@ document.getElementById("form").addEventListener("submit", async (event) => {
     const hak = document.getElementById("hak").value;
     const ban = document.getElementById("ban").value;
     const bun = document.getElementById("bun").value;
-    const name = document.getElementById("name").value;
 
-    const jjres = new Jjres(school, room, hak, ban, bun, name, classes);
+    const jjres = new Jjres(school, room, hak, ban, bun, classes);
 
     try {
         await jjres.test();
