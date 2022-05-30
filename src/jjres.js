@@ -62,6 +62,7 @@ export default class Jjres {
         const r = await fetch("/req", {
             method: "POST",
             body: JSON.stringify({
+                method: "POST",
                 url: 0,
                 data: data
             })
@@ -82,6 +83,7 @@ export default class Jjres {
         const r = await fetch("/req", {
             method: "POST",
             body: JSON.stringify({
+                method: "POST",
                 url: 0,
                 data: data
             })
@@ -104,8 +106,9 @@ export default class Jjres {
         };
 
         const r = await fetch("/req", {
-            method: "GET",
+            method: "POST",
             body: JSON.stringify({
+                method: "GET",
                 url: 2,
                 data: data
             })
@@ -142,6 +145,7 @@ export default class Jjres {
         const r = await fetch("/req", {
             method: "POST",
             body: JSON.stringify({
+                method: "POST",
                 url: 0,
                 data: data
             })
@@ -175,6 +179,7 @@ export default class Jjres {
         return (await fetch("/req", {
             method: "POST",
             body: JSON.stringify({
+                method: "POST",
                 url: 1,
                 data: data
             })
