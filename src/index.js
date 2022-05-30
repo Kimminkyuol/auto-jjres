@@ -46,7 +46,7 @@ document.getElementById("form").addEventListener("submit", async (event) => {
                     html: "신청이 완료되었습니다.<br>" + result
                 });
             });
-        } else {
+        } else if (result.isDenied) {
             Swal.fire({
                 title: "신청 예약",
                 confirmButtonText: "확인",
